@@ -16,21 +16,26 @@
 
   <script>
     const scorers = [
-      {name: "Squirtle", image: "SquirtleImage", description: "not like the squirt drink"},
-      {name: "Bulbasour", image: "BulbyImage", description: "not a sour light bulb"},
-      {name: "Charizard", image: "CharryImage", description: "not a charry lizard"},
-      {name: "Charmander", image: "CharmyImage", description: "not a charry salamander"},
-      {name: "Pikachu", image: "PikaImage", description: "possibly goated original"}
+      {name: "Squirtle", surname: "Pokemon", image: "SquirtleImage", description: "not like the squirt drink"},
+      {name: "Bulbasour", surname: "Pokemon", image: "BulbyImage", description: "not a sour light bulb"},
+      {name: "Charizard", surname: "Pokemon", image: "CharryImage", description: "not a charry lizard"},
+      {name: "Charmander", surname: "Pokemon", image: "CharmyImage", description: "not a charry salamander"},
+      {name: "Pikachu", surname: "Pokemon", image: "PikaImage", description: "possibly goated original"}
     ];
     scorers.forEach((scorer) => {
       let o = document.createElement("option");
       o.text = scorer.name;
+      o.lname = scorer.surname;
+      o.picture = scorer.image
       o.value = scorer.description;
       slctScorers.appendChild(o);
     }
     );
     slctScorers.onchange = function () {
-      result.innerText = "description: " + slctScorers.value;
+ //     result.innerText = "name: " + slctScorers.text;
+      result.innerText = "surname: " +lname;
+ //     result.innerText = "description: " + slctScorers.value;
+      
     };
   </script>
 </body>
