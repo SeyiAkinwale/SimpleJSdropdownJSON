@@ -16,21 +16,21 @@
 
   <script>
     const scorers = [
-      {name: "Squirtle", goals: 3},
-      {name: "Bulbasour", goals: 6},
-      {name: "Charizard", goals: 9},
-      {name: "Charmander", goals: 12},
-      {name: "Pikachu", goals: 15}
+      {name: "Squirtle", image: "SquirtleImage", description: "not like the squirt drink"},
+      {name: "Bulbasour", image: "BulbyImage", description: "not a sour light bulb"},
+      {name: "Charizard", image: "CharryImage", description: "not a charry lizard"},
+      {name: "Charmander", image: "CharmyImage", description: "not a charry salamander"},
+      {name: "Pikachu", image: "PikaImage", description: "possibly goated original"}
     ];
     scorers.forEach((scorer) => {
       let o = document.createElement("option");
       o.text = scorer.name;
-      o.value = scorer.goals;
+      o.value = scorer.description;
       slctScorers.appendChild(o);
     }
     );
     slctScorers.onchange = function () {
-      result.innerText = slctScorers.value + " goals";
+      result.innerText = "description: " + slctScorers.value;
     };
   </script>
 </body>
