@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simple drowpdown</title>
-    <meta charset="UTF-8" />
-  </head>
 
-  <body>
-    <div style="text-align: center">
-      <select id="slctScorers">
-        <option value="">Choose One</option>
-      </select>
-      <div id="result"></div>
-    </div>
- 
-    <script src="src/script.js">
-      const scorers = [
-    { name: "Squirtle", image: "SquirtleImage", description: "not like the squirt drink"},
-    { name: "Bulbasour", image: "BulbyImage", description: "not a sour light bulb"},
-    { name: "Charizard", image: "CharryImage", description: "not a charry lizard"},
-    { name: "Charmander", image: "CharmyImage", description: "not a s charry salamander"},
-    { name: "Pikachu", image: "PikaImage", descritption: "possibly goated original"}
+<head>
+  <title>Simple drowpdown</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <div style="text-align: center">
+    <select id="slctScorers">
+      <option value="">Choose One</option>
+    </select>
+    <div id="result"></div>
+  </div>
+
+  <script src="src/script.js">
+    const scorers = [
+      {name: "Squirtle", image: "SquirtleImage", description: "not like the squirt drink"},
+      {name: "Bulbasour", image: "BulbyImage", description: "not a sour light bulb"},
+      {name: "Charizard", image: "CharryImage", description: "not a charry lizard"},
+      {name: "Charmander", image: "CharmyImage", description: "not a s charry salamander"},
+      {name: "Pikachu", image: "PikaImage", description: "possibly goated original"}
     ];
-      scorers.forEach((scorer) => {
-        let o = document.createElement("option");
-        o.text = scorer.name;
-        o.value = scorer.goals;
-        slctScorers.appendChild(o);
-      }
+    scorers.forEach((scorer) => {
+      let o = document.createElement("option");
+      o.text = scorer.name;
+      o.value = scorer.goals;
+      slctScorers.appendChild(o);
+    }
     );
-      slctScorers.onchange = function(){
-        result.innerText=slctScorers.value+" goals"
-      };
-    </script>
-  </body>
+    slctScorers.onchange = function () {
+      result.innerText = slctScorers.value + " goals";
+    };
+  </script>
+</body>
+
 </html>
