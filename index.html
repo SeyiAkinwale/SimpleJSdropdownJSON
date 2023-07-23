@@ -9,32 +9,33 @@
 <body>
   <div style="text-align: center">
     <select id="slctScorers">
-      <option value="">Choose One</option>
+      <option value="">Choose One</option>j
     </select>
     <div id="result"></div>
   </div>
 
   <script>
     const scorers = [
-      {name: "Squirtle", surname: "Pokemon", image: "SquirtleImage", description: "not like the squirt drink"},
-      {name: "Bulbasour", surname: "Pokemon", image: "BulbyImage", description: "not a sour light bulb"},
-      {name: "Charizard", surname: "Pokemon", image: "CharryImage", description: "not a charry lizard"},
-      {name: "Charmander", surname: "Pokemon", image: "CharmyImage", description: "not a charry salamander"},
-      {name: "Pikachu", surname: "Pokemon", image: "PikaImage", description: "possibly goated original"}
+      {name: "Squirtle", "surname": "Pokemon", image: "SquirtleImage", description: "not like the squirt drink"},
+      {name: "Bulbasour", "surname": "Pokemon", image: "BulbyImage", description: "not a sour light bulb"},
+      {name: "Charizard", "surname": "Pokemon", image: "CharryImage", description: "not a charry lizard"},
+      {name: "Charmander", "surname": "Pokemon", image: "CharmyImage", description: "not a charry salamander"},
+      {name: "Pikachu", "surname": "Pokemon", image: "PikaImage", description: "possibly goated original"}
     ];
     scorers.forEach((scorer) => {
       let o = document.createElement("option");
       o.text = scorer.name;
       o.lname = scorer.surname;
       o.picture = scorer.image
-      o.value = scorer.description;
+      o.value = scorer.surname;
       slctScorers.appendChild(o);
     }
     );
     slctScorers.onchange = function () {
  //     result.innerText = "name: " + slctScorers.text;
-      result.innerText = "surname: " +lname;
+ //     result.innerText = "surname: " +lname;
  //     result.innerText = "description: " + slctScorers.value;
+        result.inneText= "surname: " + slctScorers.value;
       
     };
   </script>
